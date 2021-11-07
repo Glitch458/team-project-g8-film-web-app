@@ -1,0 +1,108 @@
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding: 20px;
+}
+
+.render-item {
+  margin-top: 20px;
+}
+
+.render-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.render-img {
+  display: block;
+  width: 280px;
+  height: 402px;
+}
+.moavi-title {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  color: black;
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.movie-info {
+  display: inline-flex;
+}
+.genre-list {
+  display: inline-flex;
+}
+.genre-item:not(:first-child) {
+  margin-left: 5px;
+}
+.gener-link {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #ff6b08;
+}
+.release-date {
+  display: flex;
+  align-items: flex-end;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #ff6b08;
+  margin-left: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .render-img {
+    width: 293px;
+    height: 398px;
+  }
+  .movie-list {
+    margin-top: 30px;
+    margin-left: 55px;
+    margin-right: 55px;
+  }
+  .render-item {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .render-img {
+    width: 274px;
+    height: 398px;
+  }
+}
