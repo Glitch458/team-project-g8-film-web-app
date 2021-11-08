@@ -1,0 +1,8 @@
+.footer {
+  background-color: $secondary-background;
+}
+@media screen and (max-width: 767px) {
+  .footer {
+    height: 100px;
+  }
+}
