@@ -1,13 +1,13 @@
 <ul class="render-list">
-    {{!-- {{#each}} --}}
+    {{#each results}}
     <li class="render-item">
         <article>
             <a class="render-img" href="">
-                <img src="https://upload.wikimedia.org/wikipedia/ru/b/b2/Deadpool_film.jpg" alt="{{original_title}}">
+                <img class="moavi-poster" src="https://image.tmdb.org/t/p/w500{{poster_path}}" alt="{{result.original_title}}">
             </a>
             <div>
                 <a href="">
-                    <h2 class="moavi-title">Deadpool</h2>
+                    <h2 class="moavi-title">{{original_title}}</h2>
                 </a>
                 <div>
                 <div class="movie-info">
@@ -19,10 +19,10 @@
                             <a class="gener-link" href="">Comedy</a>
                         </li>
                     </ul>
-                    <p class="release-date">| "2021"</p>
+                    <p class="release-date">| {{release_date}}</p>
                 </div>
             </div>
         </article>
     </li>
-    {{!-- {{/each}} --}}
+    {{/each}}
 </ul>
