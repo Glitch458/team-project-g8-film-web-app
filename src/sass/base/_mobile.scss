@@ -1,0 +1,151 @@
+.card-close-btn {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 18px;
+  left: 210px;
+  background: #ffffff;
+  cursor: pointer;
+  color: black;
+}
+.mobile-menu__icon {
+  outline: 1px solid black;
+}
+.card {
+  width: 280px;
+  padding: 20px;
+
+  outline: 1px solid red;
+}
+.card-img {
+  padding: 48px 20px 30px 20px;
+  width: 240px;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+.carf-body {
+  display: flex;
+}
+.card-body-title {
+  margin-bottom: 20px;
+  padding-left: 20px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.15;
+
+  color: #000000;
+}
+.card-body-name {
+  padding-left: 20px;
+  margin-bottom: 10px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+
+  color: #8c8c8c;
+}
+.card-body-vote-average {
+  margin-left: 51px;
+  width: 36px;
+  height: 16px;
+
+  font-family: Roboto;
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  color: white;
+
+  background: #ff6b01;
+  border-radius: 5px;
+}
+.card-body-popularuity {
+  padding-left: 56px;
+}
+.card-body-original {
+  padding-left: 49px;
+}
+.card-body-genres {
+  padding-left: 86px;
+}
+
+.card-body-vote-count,
+.card-body-popularuity,
+.card-body-original,
+.card-body-text,
+.card-body-genres {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+
+  color: #000000;
+}
+.card-body-overview-title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+.card-body-overview-text {
+  margin-bottom: 21px;
+  padding-left: 20px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67;
+
+  color: #000000;
+}
+.card-container-btn {
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.card-btn-watched,
+.card-btn-queue {
+  width: 112.58px;
+  height: 44px;
+
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  background-color: #fff;
+}
+.card-btn-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+}
+.card-btn-watched {
+  background-color: #ff6b01;
+  color: white;
+  border: 5px;
+  margin-right: 15px;
+}
+.card-body-container {
+  display: flex;
+}
