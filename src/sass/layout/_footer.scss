@@ -6,6 +6,15 @@
     margin-left: 10px;
   }
 }
+.element-animation {
+  transform: translate(0, 60px);
+  opacity: 0;
+}
+.footer__container.element-show {
+  transform: translate(0, 0px);
+  opacity: 1;
+  transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .footer__description-unicode {
   margin-right: 4px;
 }
