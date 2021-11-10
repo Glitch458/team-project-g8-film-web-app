@@ -1,0 +1,102 @@
+#counter {
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pag_btn {
+  width: 40px;
+  height: 100%;
+  border-radius: 5px;
+  background-color: var(--footer-bg-color);
+  border: none;
+}
+.pag_btn:hover {
+  background-color: var(--accent-color);
+  color: var(--main-color);
+}
+
+.pag_list {
+  display: flex;
+  list-style-type: none;
+  margin: 0 12px;
+  height: 100%;
+}
+.pag_item:hover,
+.pag_item:focus {
+  cursor: pointer;
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.pag_item__current {
+  cursor: pointer;
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.pagination.container {
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+.pagination.is-hidden {
+  display: none;
+}
+
+.pag_item.is-hidden {
+  display: none;
+}
+
+.pag_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  margin: 0;
+  border-radius: 5px;
+}
+.pag_text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}
+.pag_acc {
+  width: 40px;
+  margin: 0;
+  border-radius: 5px;
+  color: var(--main-color);
+  background-color: var(--accent-color);
+}
+
+.pag_item-dots {
+  &:hover {
+    background-color: var(--main-color);
+    cursor: default;
+
+    color: var(--primary-color);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .pagination.container {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    .pag_item {
+      margin: 0 8px;
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .pagination.container {
+    padding-top: 40px;
+  }
+  .pag_item {
+    margin: 0 10px;
+  }
+}
