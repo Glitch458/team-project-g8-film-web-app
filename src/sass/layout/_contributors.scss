@@ -18,8 +18,8 @@
     padding: 15px;
     text-align: center;
     flex-basis: calc((100% - 60px) / 2);
-    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #ff6b08, 0 0 0.8rem #ff6b08,
-      0 0 2.8rem #ff6b08, inset 0 0 1.3rem #ff6b08;
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem $accent, 0 0 0.8rem $accent,
+      0 0 2.8rem $accent, inset 0 0 1.3rem $accent;
     border-radius: 0px 0px 4px 4px;
     background-color: #000;
   }
@@ -40,11 +40,11 @@
     height: 24px;
     border-radius: 50%;
     margin-bottom: 10px;
-    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #ff6b08, 0 0 0.8rem #ff6b08,
-      0 0 2.8rem #ff6b08, inset 0 0 1.3rem #ff6b08;
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem $accent, 0 0 0.8rem $accent,
+      0 0 2.8rem $accent, inset 0 0 1.3rem $accent;
 
     &:hover {
-      fill: #ff6b08;
+      fill: $accent;
     }
   }
 }
