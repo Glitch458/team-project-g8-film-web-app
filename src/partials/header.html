@@ -1,22 +1,28 @@
 <header class="header">
-  <div class="container">
-      <div class="header__menu">
-          <svg class="header__icon--film" width="24" height="24">
-            <use href="./images/sprite.svg#icon-film"></use>
-          </svg>
-          <nav class="header__nav">
-            <a class="header__nav--link">HOME</a>
-            <a class="header__nav--link">MY LIBRARY</a>
-          </nav>
-      </div>
+    <div class="container">
+        <div class="header__menu">
+            <div class="header__logo-box">
+                <svg class="header__icon--logo" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-logo"></use>
+                </svg>
+                <h1 class="header__title">Filmoteka</h1>
+            </div>
+          
+            <nav class="header__nav">
+                <a class="header__nav--link" href="#">HOME</a>
+                <a class="header__nav--link" href="#">MY LIBRARY</a>
+            </nav>
+        </div>
     
+        <label class="header__label">
+              <input 
+                  class="header__input" 
+                  name="filmname" 
+                  placeholder="Поиск фильмов"/>
+        </label>
 
-    <label class="header__label">
-      <input class="header__input" placeholder="Поиск фильмов"/>
-    </label>
-
-    <svg class="header__icon--search" width="12" height="12">
-      <use href="./images/sprite.svg#icon-search"></use>
-    </svg>
-  </div>
+        <svg class="header__icon--search" width="12" height="12">
+            <use href="./images/sprite.svg#icon-search"></use>
+        </svg>
+    </div>
 </header>
