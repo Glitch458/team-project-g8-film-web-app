@@ -14,58 +14,39 @@
 .card {
   width: 280px;
   padding: 20px;
-
-  outline: 1px solid red;
 }
 .card-img {
   padding: 48px 20px 30px 20px;
   width: 240px;
 }
 img {
-  display: block;
   max-width: 100%;
-}
-.carf-body {
-  display: flex;
 }
 .card-body-title {
   margin-bottom: 20px;
   padding-left: 20px;
 
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
   font-size: 20px;
   line-height: 1.15;
 
-  color: #000000;
+  color: $primary-text-color;
 }
 .card-body-name {
   padding-left: 20px;
   margin-bottom: 10px;
 
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.33;
-
-  color: #8c8c8c;
+  color: $footer-text-color;
 }
 .card-body-vote-average {
   margin-left: 51px;
   width: 36px;
   height: 16px;
 
-  font-family: Roboto;
   text-align: center;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
   line-height: 1.17;
-  color: white;
+  color: $primary-background;
 
-  background: #ff6b01;
+  background: $accent-secondary;
   border-radius: 5px;
 }
 .card-body-popularuity {
@@ -83,39 +64,26 @@ img {
 .card-body-original,
 .card-body-text,
 .card-body-genres {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
   line-height: 1.17;
 
-  color: #000000;
+  color: $primary-text-color;
 }
 .card-body-overview-title {
   margin-top: 20px;
   margin-bottom: 10px;
   padding-left: 20px;
 
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.33;
   text-transform: uppercase;
 
-  color: #000000;
+  color: $primary-background;
 }
 .card-body-overview-text {
   margin-bottom: 21px;
   padding-left: 20px;
 
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
   line-height: 1.67;
 
-  color: #000000;
+  color: $primary-text-color;
 }
 .card-container-btn {
   padding-left: 20px;
@@ -131,18 +99,11 @@ img {
   box-sizing: border-box;
   border-radius: 5px;
 
-  background-color: #fff;
-}
-.card-btn-text {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.33;
+  background-color: $primary-background;
 }
 .card-btn-watched {
-  background-color: #ff6b01;
-  color: white;
+  background-color: $accent-secondary;
+  color: $primary-text-color;
   border: 5px;
   margin-right: 15px;
 }
