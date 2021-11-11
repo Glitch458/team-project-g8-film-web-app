@@ -10,12 +10,12 @@
   width: 40px;
   height: 100%;
   border-radius: 5px;
-  background-color: var(--footer-bg-color);
+  background-color: $secondary-background;
   border: none;
 }
 .pag_btn:hover {
-  background-color: var(--accent-color);
-  color: var(--main-color);
+  background-color: $accent;
+  color: $secondary-text-color;
 }
 
 .pag_list {
@@ -27,13 +27,13 @@
 .pag_item:hover,
 .pag_item:focus {
   cursor: pointer;
-  background-color: var(--accent-color);
+  background-color: $accent;
   color: white;
 }
 
 .pag_item__current {
   cursor: pointer;
-  background-color: var(--accent-color);
+  background-color: $accent;
   color: white;
 }
 
@@ -70,16 +70,16 @@
   width: 40px;
   margin: 0;
   border-radius: 5px;
-  color: var(--main-color);
-  background-color: var(--accent-color);
+  color: $secondary-text-color;
+  background-color: $accent;
 }
 
 .pag_item-dots {
   &:hover {
-    background-color: var(--main-color);
+    background-color: $secondary-text-color;
     cursor: default;
 
-    color: var(--primary-color);
+    color: $primary-text-color;
   }
 }
 
