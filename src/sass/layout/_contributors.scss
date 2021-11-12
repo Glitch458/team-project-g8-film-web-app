@@ -1,0 +1,83 @@
+.cont {
+  position: absolute;
+  margin: 85px 15px;
+  padding: 15px;
+  background-color: #000;
+  background-image: url('../images/wall-mobile.jpg');
+  background-size: cover;
+  box-shadow: 0 0 0.2rem rgb(0, 0, 0), 0 0 0.2rem rgb(0, 0, 0), 0 0 2rem #2e2e2e, 0 0 0.8rem #2e2e2e,
+    0 0 2.8rem #2e2e2e, inset 0 0 1.3rem #2e2e2e;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__member {
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+    flex-basis: calc((100% - 60px) / 2);
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem $accent, 0 0 0.8rem $accent,
+      0 0 2.8rem $accent, inset 0 0 1.3rem $accent;
+    border-radius: 0px 0px 4px 4px;
+    background-color: #000;
+  }
+
+  &__photo {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 10px;
+  }
+
+  &__role {
+    margin-bottom: 10px;
+    color: #fff;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem $accent, 0 0 0.8rem $accent,
+      0 0 2.8rem $accent, inset 0 0 1.3rem $accent;
+
+    &:hover {
+      fill: $accent;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cont {
+    top: 15%;
+    left: 50%;
+    margin: unset;
+    transform: translateX(-50%);
+    padding: 30px;
+    width: 65%;
+    background-image: url('../images/wall-tablet.jpg');
+
+    &__list {
+      justify-content: center;
+    }
+
+    &__member {
+      margin: 15px;
+      padding: 20px;
+      flex-basis: calc((100% - 90px) / 3);
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .cont {
+    background-image: url('../images/wall-desktop.jpg');
+    width: 85%;
+
+    &__member {
+      flex-basis: calc((100% - 120px) / 4);
+    }
+  }
+}
