@@ -26,6 +26,10 @@
     "sass": "^1.32.8"
   },
   "dependencies": {
-    "handlebars": "^4.7.7"
+    "handlebars": "^4.7.7",
+    "basiclightbox": "^5.0.4",
+    "lodash.debounce": "^4.0.8",
+    "lodash.throttle": "^4.1.1",
+    "modern-normalize": "^1.1.0"
   }
 }
