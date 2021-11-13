@@ -1,6 +1,6 @@
 // import './js/add-movie-list.js';
 import './sass/main.scss';
-// import './js/modal';
+import './js/modal';
 import './js/contributors';
 import './js/footer-animation';
 import './js/spinner';
