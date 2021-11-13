@@ -9,8 +9,8 @@
             </div>
           
             <nav class="header__nav">
-                <a class="header__nav--link" href="#">HOME</a>
-                <a class="header__nav--link" href="#">MY LIBRARY</a>
+                <a class="header__nav--link" id="link-home" href="#">HOME</a>
+                <a class="header__nav--link" id="link-lib" href="#">MY LIBRARY</a>
             </nav>
         </div>
     
@@ -24,7 +24,14 @@
                     <use href="./images/sprite.svg#icon-search"></use>
                 </svg>
         </label>
-
-        
     </div>
+
+    <label class="header__label">
+      <input class="header__input header__form-input" name="filmname" placeholder="Поиск фильмов" />
+    </label>
+
+    <svg class="header__icon--search" width="12" height="12">
+      <use href="./images/sprite.svg#icon-search"></use>
+    </svg>
+  </div>
 </header>
