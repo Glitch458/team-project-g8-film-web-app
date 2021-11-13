@@ -11,10 +11,9 @@ function fetchMovie(movie) {
     })
     .then(movie => {
       const markup = movieCardTpl(movie);
-      console.log(markup);
       refs.movieCardContainer.innerHTML = markup;
     })
-    .catch(eror => console.log(error));
+    .catch(error => console.log(error));
 }
 
-fetchMovie()
+fetchMovie();
