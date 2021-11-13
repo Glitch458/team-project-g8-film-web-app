@@ -1,26 +1,36 @@
 .header {
+  width: 100%;
+  height: 230px;
   padding-top: 41px;
   padding-bottom: 97px;
+  background-image: url('../images/header-bg/header-bg-home_M.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 
-  @media screen and (min-width: 320px) {
-    background: -webkit-image-set(
-      url('../images/header-bg/header-bg-home_M.png') 1x,
-      url('../images/header-bg/header-bg-home@2_M.png') 2x
-    );
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../images/header-bg/header-bg-home@2_M.png');
   }
 
   @media screen and (min-width: 768px) {
-    background: -webkit-image-set(
-      url('../images/header-bg/header-bg-home_T.png') 1x,
-      url('../images/header-bg/header-bg-home@2_T.png') 2x
-    );
+    background-image: url('../images/header-bg/header-bg-home_T.png');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/header-bg/header-bg-home@2_T.png');
+    }
   }
 
   @media screen and (min-width: 1024px) {
-    background: -webkit-image-set(
-      url('../images/header-bg/header-bg-home_D.png') 1x,
-      url('../images/header-bg/header-bg-home@2_D.png') 2x
-    );
+    background-image: url('../images/header-bg/header-bg-home_D.png');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/header-bg/header-bg-home@2_D.png');
+    }
   }
 }
 
@@ -68,6 +78,7 @@
 }
 
 .header__label {
+  position: relative;
   display: block;
   width: 280px;
   margin: 0 auto;
@@ -85,8 +96,7 @@
 }
 
 .header__input {
-  position: relative;
-  width: 100%;
+  width: 280px;
   height: 20px;
   border: none;
   background-color: transparent;
@@ -106,16 +116,7 @@
 
 .header__icon--search {
   position: absolute;
-  top: 120px;
-  transform: translateY(-50%);
-  left: 287px;
-
-  @media screen and (min-width: 768px) {
-    top: 123px;
-    left: 538px;
-  }
-
-  @media screen and (min-width: 1024px) {
-    left: 665px;
-  }
+  display: block;
+  top: 2px;
+  right: 2px;
 }
