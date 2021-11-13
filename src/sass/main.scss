@@ -3,11 +3,14 @@
 @import './utils/visually-hidden';
 @import './base/container';
 @import './layout/header';
-@import './layout/mobile';
 @import './layout/gallery';
+@import './layout/mobile';
+@import './layout/tablet';
+@import './layout/desktop';
 @import './layout/pagination';
 @import './layout/footer';
 @import './utils/backdrop';
 @import './layout/contributors';
 @import './layout/notifications';
 @import './layout/spinner';
+

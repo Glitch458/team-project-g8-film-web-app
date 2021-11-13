@@ -5,7 +5,7 @@ const refs = {
 };
 
 function fetchMovie(movie) {
-  return fetch('https://api.themoviedb.org/3/movie/255?api_key=744d4295a955a17cccf78658c430f199')
+  return fetch('https://api.themoviedb.org/3/movie/777?api_key=744d4295a955a17cccf78658c430f199')
     .then(response => {
       return response.json();
     })
@@ -17,9 +17,4 @@ function fetchMovie(movie) {
     .catch(eror => console.log(error));
 }
 
-// function renderMovieCard() {
-//     const markup = modalCard(response);
-//     movieCard.innerHTML = markup;
-// }
-
-// console.log(onSearch())
+fetchMovie()
