@@ -8,3 +8,4 @@ import './js/apiService';
 import './js/gallery';
 import './js/pagination';
 // import './js/add-movie-list.js';
+import './js/scroll-up-btn'
