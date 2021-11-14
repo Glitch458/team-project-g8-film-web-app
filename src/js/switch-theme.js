@@ -1,23 +1,27 @@
+const Theme = {
+  LIGHT: 'light-theme',
+  DARK: 'dark-theme',
+};
+
+const bodyClass = document.querySelector('body');
 const switchIcon = document.querySelector('.header__theme-switcher');
-const filmTitle = document.querySelector('.film-title');
+const filmTitle = document.querySelector('#film-title');
 switchIcon.addEventListener('click', switchTheme);
 
 let theme = 'LIGTH';
-console.log(filmTitle);
+bodyClass.classList.add(Theme.LIGHT);
+
 function switchTheme () {
     
     if (theme === 'LIGTH') {
         theme = 'DARK';
         darkSwitcher();
-        // filmTitle.classList.remove('film-title-light');
-        // filmTitle.classList.add('film-title-dark');
-        document.body.style.background = "#1a0202";
+        bodyClass.classList.replace(Theme.LIGHT, Theme.DARK);
         
     } else {
         theme = 'LIGTH';
         lightSwitcher();
-        document.body.style.background = "#ffffff";
-        
+        bodyClass.classList.replace(Theme.DARK, Theme.LIGHT);
     }
 };
 
