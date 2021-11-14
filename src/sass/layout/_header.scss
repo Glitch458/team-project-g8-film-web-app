@@ -66,8 +66,11 @@
 }
 
 .header__nav--link {
+  background-color: transparent;
   color: $primary-background;
+}
 
+.header__nav--link--current {
   &::after {
     content: '';
     display: block;

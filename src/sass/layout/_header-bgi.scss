@@ -1,0 +1,63 @@
+.header-home {
+  background-image: url('../images/header-bg/header-bg-home_M.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../images/header-bg/header-bg-home@2_M.png');
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url('../images/header-bg/header-bg-home_T.png');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/header-bg/header-bg-home@2_T.png');
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    background-image: url('../images/header-bg/header-bg-home_D.png');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/header-bg/header-bg-home@2_D.png');
+    }
+  }
+}
+
+.header-library {
+  background-image: url('../images/header-bg/header-bg-libr_M.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../images/header-bg/header-bg-libr@2_M.png');
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url('../images/header-bg/header-bg-libr_T.png');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/header-bg/header-bg-libr@2_T.png');
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    background-image: url('../images/header-bg/header-bg-libr_D.png');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/header-bg/header-bg-libr@2_D.png');
+    }
+  }
+}
