@@ -1,24 +1,24 @@
 @media screen and (min-width: 1024px) {
-  .card {
+  .modal-card {
     padding: 50px 30px 40px 30px;
 
     width: 882px;
     outline: 1px solid red;
   }
-  .card-img {
+  .modal-card-img {
     width: 396px;
     height: 478px;
     padding: 0;
   }
-  .card-info {
+  .modal-card-info {
     width: 396px;
   }
-  .card-body-title {
+  .modal-card-body-title {
     font-size: 30px;
     line-height: 1.17;
   }
-  .card-btn-watched,
-  .card-btn-queue {
+  .modal-card-btn-watched,
+  .modal-card-btn-queue {
     width: 136px;
   }
 }
