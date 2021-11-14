@@ -1,7 +1,7 @@
 const headerLabel = document.querySelector('.header__label');
 const myLibraryBtn = document.querySelector('.my-library__btns');
-const add = document.querySelector('#link-lib');
-const remove = document.querySelector('#link-home');
+const add = document.querySelector('[data-action="link-lib"]');
+const remove = document.querySelector('[data-action="link-home"]');
 
 add.addEventListener('click', () => {
     headerLabel.classList.add('visually-hidden');
