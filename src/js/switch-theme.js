@@ -5,7 +5,6 @@ const Theme = {
 
 const bodyClass = document.querySelector('body');
 const switchIcon = document.querySelector('.header__theme-switcher');
-const filmTitle = document.querySelector('#film-title');
 switchIcon.addEventListener('click', switchTheme);
 
 let theme = 'LIGTH';
