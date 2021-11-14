@@ -9,3 +9,4 @@ import './js/gallery';
 import './js/pagination';
 import './js/my-library-btn';
 import './js/navigation';
+import './js/scroll-up-btn'
