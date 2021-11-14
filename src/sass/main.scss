@@ -3,6 +3,7 @@
 @import './utils/visually-hidden';
 @import './base/container';
 @import './layout/header';
+@import './layout/header-bgi';
 @import './layout/gallery';
 // @import './layout/mobile';
 // @import './layout/tablet';
@@ -13,3 +14,5 @@
 @import './layout/contributors';
 @import './layout/notifications';
 @import './layout/spinner';
+@import './layout/my-library-btn';
+@import './layout/scroll-up-btn';
