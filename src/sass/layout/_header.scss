@@ -34,6 +34,10 @@
   }
 }
 
+.header__box {
+  position: relative;
+}
+
 .header__menu {
   display: flex;
   justify-content: space-between;
@@ -119,4 +123,22 @@
   display: block;
   top: 2px;
   right: 2px;
+}
+.header__theme-switcher {
+  position: absolute;
+  right: 30px;
+  bottom: -70px;
+  @media screen and (min-width: 767px) {
+    right: 75px;
+  }
+}
+
+.ligth {
+  fill: $accent;
+  transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark {
+  fill: $primary-background;
+  transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
