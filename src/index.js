@@ -7,5 +7,5 @@ import './js/spinner';
 import './js/apiService';
 import './js/gallery';
 import './js/pagination';
-import './js/nav-to-home';
 import './js/my-library-btn';
+import './js/navigation';
