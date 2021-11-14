@@ -1,4 +1,3 @@
-// import './js/add-movie-list.js';
 import './sass/main.scss';
 import './js/modal';
 import './js/contributors';
@@ -9,4 +8,5 @@ import './js/gallery';
 import './js/pagination';
 import './js/my-library-btn';
 import './js/navigation';
+import './js/switch-theme';
 import './js/scroll-up-btn'
