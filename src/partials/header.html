@@ -1,30 +1,35 @@
-<header class="header">
-    <div class="container">
-        <div class="header__menu">
-            <div class="header__logo-box">
-                <svg class="header__icon--logo" width="24" height="24">
-                    <use href="./images/sprite.svg#icon-logo"></use>
-                </svg>
-                <h1 class="header__title">Filmoteka</h1>
-            </div>
-          
-            <nav class="header__nav">
-                <a class="header__nav--link" href="#">HOME</a>
-                <a class="header__nav--link" href="#">MY LIBRARY</a>
-            </nav>
-        </div>
-    
-        <label class="header__label">
-              <input 
-                  class="header__input header__form-input" 
-                  name="filmname" 
-                  placeholder="Поиск фильмов"/>
+<header class="header header-home">
+  <div class="container">
+    <div class="header__menu">
+      <div class="header__logo-box">
+        <svg class="header__icon--logo" width="24" height="24">
+          <use href="./images/sprite.svg#icon-logo"></use>
+        </svg>
+        <h1 class="header__title">Filmoteka</h1>
+      </div>
 
-                <svg class="header__icon--search" width="12" height="12">
-                    <use href="./images/sprite.svg#icon-search"></use>
-                </svg>
-        </label>
-
-        
+      <nav class="header__nav">
+        <button type= 'button' class="header__nav--link header__nav--link--current" data-action="link-home">HOME</button>
+        <button type= 'button' class="header__nav--link" data-action="link-lib">MY LIBRARY</a>
+      </nav>
     </div>
+
+    <label class="header__label">
+      <input class="header__input header__form-input" name="filmname" placeholder="Поиск фильмов" />
+
+      <svg class="header__icon--search" width="12" height="12">
+        <use href="./images/sprite.svg#icon-search"></use>
+      </svg>
+    </label>
+    <div class="my-library__btns visually-hidden">
+      <ul class="my-library__list">
+        <il class="my-library__item">
+          <button class="my-library__button button js-btn-watched" type="button">Watched</button>
+        </il>
+        <il class="my-library__item">
+          <button class="my-library__button button js-btn-queue" type="button">Queue</button>
+        </il>
+      </ul>
+    </div>
+  </div>
 </header>
