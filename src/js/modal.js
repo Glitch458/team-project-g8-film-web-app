@@ -10,9 +10,10 @@ const refs = {
 console.log(refs.closeBtn)
 
 function fetchMovie(movie) {
-  return fetch('https://api.themoviedb.org/3/movie/777?api_key=744d4295a955a17cccf78658c430f199')
+  return fetch(`https://api.themoviedb.org/3/movie/${movie}?api_key=744d4295a955a17cccf78658c430f199`)
     .then(response => {
       return response.json();
+      console.log(response.json())
     })
     .then(movie => {
       const markup = movieCardTpl(movie);
@@ -22,12 +23,14 @@ function fetchMovie(movie) {
 }
 // console.log(refs.closeBtn)
 
+
 refs.galleryMovies.addEventListener('click', openMovieModal);
 
 function openMovieModal(evt) {
   evt.preventDefault();
+  const id = Number(evt.target.id);
   openModal()
-  fetchMovie();
+  fetchMovie(id);
   window.addEventListener('keydown', closeContributorsModalByEsc);
   backdropEl.addEventListener('click', closeContributorsModalByClick);
 }
