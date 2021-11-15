@@ -45,7 +45,12 @@ body {
 
 body.light-theme {
   background: #ffffff;
-  background-image: url(../images/background-images/cinema-white.jpg);
+  background-image: radial-gradient(
+      circle at bottom left,
+      rgba(167, 80, 0, 0.445),
+      rgba(255, 255, 255, 0.349)
+    ),
+    url(../images/background-images/cinema-white.jpg);
   background-attachment: fixed;
   background-size: auto 100%;
   background-position: left;
@@ -60,7 +65,12 @@ body.light-theme {
 
 body.dark-theme {
   background: #1a0202;
-  background-image: url(../images/background-images/cinema-dark.jpg);
+  background-image: radial-gradient(
+      circle at bottom left,
+      rgba(105, 51, 0, 0.445),
+      rgba(0, 0, 0, 0.349)
+    ),
+    url(../images/background-images/cinema-dark.jpg);
   background-attachment: fixed;
   background-size: auto 100%;
   background-position: left;

@@ -18,11 +18,18 @@
 
 /* -------- FILM CARD STYLES -------- */
 .card {
-  transition: 0.5s linear;
+  transition: 0.25s linear;
 
   border-radius: 5px;
   padding: 5px;
   padding-bottom: 10px;
+}
+.cards--light > .card {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9));
+}
+
+.cards--dark > .card {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.9));
 }
 
 .card:hover,
