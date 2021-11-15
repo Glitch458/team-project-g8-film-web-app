@@ -45,14 +45,29 @@ body {
 
 body.light-theme {
   background: #ffffff;
+  background-image: url(../images/background-images/cinema-white.jpg);
+  background-attachment: fixed;
+  background-size: auto 100%;
+  background-position: left;
   color: #000000;
   transition: background 600ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 1152px) {
+    background-size: 100% auto;
+  }
 }
 
 body.dark-theme {
   background: #1a0202;
+  background-image: url(../images/background-images/cinema-dark.jpg);
+  background-attachment: fixed;
+  background-size: auto 100%;
+  background-position: left;
   color: #ffffff;
   transition: background 600ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (min-width: 1152px) {
+    background-size: 100% auto;
+  }
 }
