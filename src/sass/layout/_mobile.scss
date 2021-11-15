@@ -1,12 +1,19 @@
+.modal-movie-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: gray;
+}
 .modal-card-close-btn {
   width: 30px;
   height: 30px;
   position: absolute;
   top: 18px;
   left: 210px;
-  background: #ffffff;
+  // background: #ffffff;
   cursor: pointer;
   color: black;
+  // background-image: url('../../images/icon-close.svg');
 }
 .mobile-menu__icon {
   outline: 1px solid black;
@@ -15,6 +22,12 @@
   width: 280px;
 
   padding: 20px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  background-color: $primary-background;
 }
 .modal-card-img {
   padding: 48px 20px 30px 20px;
