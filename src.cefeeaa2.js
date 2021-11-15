@@ -11,7 +11,7 @@ var e,t=arguments[3];!function(t,r){"object"==typeof exports&&"object"==typeof m
 },{"../templates/movie-card.hbs":"WSZA"}],"dE7Y":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.backdropEl=void 0,exports.closeModal=s,exports.openModal=o;const e=document.querySelector(".backdrop");function o(){e.classList.remove("is-hidden")}function s(){e.classList.add("is-hidden")}exports.backdropEl=e;
 },{}],"UWFd":[function(require,module,exports) {
-"use strict";var e=require("./backdrop");const n=document.querySelector(".footer__description-link");function o(n){n.preventDefault(),(0,e.openModal)(),window.addEventListener("keydown",t),e.backdropEl.addEventListener("click",c)}function t(n){"Escape"===n.key&&((0,e.closeModal)(),window.removeEventListener("keydown",t))}function c(n){n.target===e.backdropEl&&((0,e.closeModal)(),e.backdropEl.removeEventListener("click",c))}n.addEventListener("click",o);
+"use strict";var e=require("./backdrop");const n=document.querySelector(".footer__description-link");function o(n){n.preventDefault(),(0,e.openModal)(),window.addEventListener("keydown",t),e.backdropEl.addEventListener("click",r)}function t(n){"Escape"===n.key&&((0,e.closeModal)(),window.removeEventListener("keydown",t),e.backdropEl.removeEventListener("click",r))}function r(n){n.target===e.backdropEl&&((0,e.closeModal)(),e.backdropEl.removeEventListener("click",r),window.removeEventListener("keydown",t))}n.addEventListener("click",o);
 },{"./backdrop":"dE7Y"}],"zYIY":[function(require,module,exports) {
 function e(e){e.forEach(e=>{e.isIntersecting?e.target.classList.add("element-show"):e.target.classList.remove("element-show")})}let t={threshold:[.5]},s=new IntersectionObserver(e,t),n=document.querySelectorAll(".element-animation");for(let o of n)s.observe(o);
 },{}],"Sc1o":[function(require,module,exports) {
@@ -42,4 +42,4 @@ const o=document.querySelector(".scroll-up-btn");function e(){document.body.scro
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/modal"),require("./js/contributors"),require("./js/footer-animation"),require("./js/spinner"),require("./js/apiService"),require("./js/gallery"),require("./js/pagination"),require("./js/my-library-btn"),require("./js/navigation"),require("./js/switch-theme"),require("./js/scroll-up-btn");
 },{"./sass/main.scss":"clu1","./js/modal":"RSqK","./js/contributors":"UWFd","./js/footer-animation":"zYIY","./js/spinner":"Sc1o","./js/apiService":"eQwa","./js/gallery":"chxP","./js/pagination":"o8lo","./js/my-library-btn":"zUhL","./js/navigation":"qr24","./js/switch-theme":"pE8F","./js/scroll-up-btn":"xnMT"}]},{},["Focm"], null)
-//# sourceMappingURL=/team-project-g8-film-web-app/src.a2675d5e.js.map
+//# sourceMappingURL=/team-project-g8-film-web-app/src.cefeeaa2.js.map
