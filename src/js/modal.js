@@ -57,10 +57,10 @@ refs.movieCardContainer.addEventListener('click', function (e) {
     closeModal();
     window.removeEventListener('keydown', closeContributorsModalByEsc);
     backdropEl.removeEventListener('click', closeContributorsModalByClick);
-  } else if (e.target.classList.contains('modal-card-btn-watched' || 'modal-card-btn-text-first')) {
+  } else if (e.target.classList.contains('modal-card-btn-watched')) {
     //Функция для кнопки "ADD TO WACHED"
     console.log('кнопка 1');
-  } else if (e.target.classList.contains('modal-card-btn-queue' || 'modal-card-btn-text-second')) {
+  } else if (e.target.classList.contains('modal-card-btn-queue')) {
     // Функция для кнопки "ADD TO QUEUE"
     console.log('кнопка 2');
   }
