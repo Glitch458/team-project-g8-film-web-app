@@ -1,45 +1,58 @@
-<div class="card">
-    <div class="card-img">
-    <button class="card-close-btn" type="button"><svg class="mobile-menu__icon" width="14" height="14">
-        <use href="./images/sprite.svg#icon-close"></use>
-    </svg></button>
-        <img src="https://image.tmdb.org/t/p/w500/{{poster_path}}" alt="{{title}}" height="356" width="240">
-    </div>
-    <div class="card-info">
-        <div class="card-body">
-            <h2 class="card-body-title">{{title}}</h2>
-        <div class="card-body-container">
-            <p class="card-body-name">Vote / Votes</p>
-            <p class="card-body-vote-average">{{vote_average}}</p>
-            <p class="card-body-vote-count"> /{{vote_count}}</p>
-        </div>
-    
-        <div class="card-body-container">    
-            <p class="card-body-name">Popularuity</p> 
-            <p class="card-body-popularuity">{{popularity}}</p>
-        </div>
-        <div class="card-body-container">
-            <p class="card-body-name">Original Title</p> 
-            <p class="card-body-original">{{original_title}}</p>
-        </div>
-        <div class="card-body-container">
-            <p class="card-body-name">Genre</p>
-            <p class="card-body-genres">{{genres.0.name}}, {{genres.1.name}}</p>
-        </div>
-            {{!-- <ul class="card-body-list">
+<div class='modal-card'>
+  <div class='modal-card-img'>
+    <button class='modal-card-close-btn' type='button'><svg
+        class='mobile-menu__icon'
+        width='14'
+        height='14'
+      >
+        <use href='./images/icon-close.svg'></use>
+      </svg></button>
+    <img
+      class='modal-card-pic'
+      src='https://image.tmdb.org/t/p/w500/{{poster_path}}'
+      alt='{{title}}'
+      height='356'
+      width='240'
+    />
+  </div>
+  <div class='modal-card-info'>
+    <div class='modal-card-body'>
+      <h2 class='modal-card-body-title'>{{title}}</h2>
+      <div class='modal-card-body-container'>
+        <p class='modal-card-body-name'>Vote / Votes</p>
+        <p class='modal-card-body-vote-average'>{{vote_average}}</p>
+        <p class='modal-card-body-vote-count'> /{{vote_count}}</p>
+      </div>
+
+      <div class='modal-card-body-container'>
+        <p class='modal-card-body-name'>Popularuity</p>
+        <p class='modal-card-body-popularuity'>{{popularity}}</p>
+      </div>
+      <div class='modal-card-body-container'>
+        <p class='modal-card-body-name'>Original Title</p>
+        <p class='modal-card-body-original'>{{original_title}}</p>
+      </div>
+      <div class='modal-card-body-container'>
+        <p class='modal-card-body-name'>Genre</p>
+        <p class='modal-card-body-genres'>{{genres.0.name}}, {{genres.1.name}}</p>
+      </div>
+      {{!-- <ul class="card-body-list">
         {{#each genres}}
                 <li class="card-body-text">{{name}}</li>
         {{/each}}
             </ul> --}}
-            <h3 class="card-body-overview-title">ABOUT</h3>
-            <p class="card-body-overview-text">{{overview}}</p>
-        </div>
-        <div class="card-container-btn">
-            <button class="card-btn-watched" type="button"><span class="card-btn-text-first">ADD TO WATCHED</span></button>
-            <button class="card-btn-queue" type="button"><span class="card-btn-text-second">ADD TO QUEUE</span></button>
-        </div>
+      <h3 class='modal-card-body-overview-title'>ABOUT</h3>
+      <p class='modal-card-body-overview-text'>{{overview}}</p>
     </div>
+    <div class='modal-card-container-btn'>
+      <button class='modal-card-btn-watched' type='button'><span
+          class='modal-card-btn-text-first'
+        >ADD TO WATCHED</span></button>
+      <button class='modal-card-btn-queue' type='button'><span
+          class='modal-card-btn-text-second'
+        >ADD TO QUEUE</span></button>
+    </div>
+  </div>
 </div>
 
-
-        {{!-- <use href="./images/close-modal.svg#close-modal"></use> --}}
+{{! <use href="./images/close-modal.svg#close-modal"></use> }}
