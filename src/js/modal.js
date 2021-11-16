@@ -1,3 +1,4 @@
+export default fetchMovie();
 import movieCardTpl from '../templates/movie-card.hbs';
 import { backdropEl, openModal, closeModal } from './backdrop';
 
