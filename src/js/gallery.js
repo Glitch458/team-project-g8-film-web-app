@@ -11,11 +11,14 @@ const refs = {
   gallery: document.querySelector('.js-gallery'),
   search: document.querySelector('.header__form-input'),
   pagination: document.querySelector('.pagination'),
+  iconSearch: document.querySelector('.header__icon--search')
 };
 
 createPopularMoviesGallery();
 refs.search.addEventListener('input', debounce(onInputChange, 1000));
 refs.search.addEventListener('keydown', preventOnEnterSubmit);
+refs.search.addEventListener('focus', () => refs.iconSearch.classList.add('is-hidden'));
+refs.search.addEventListener('blur', () => refs.iconSearch.classList.remove('is-hidden'));
 
 // ----- home ввод в input
 function onInputChange(evt) {
