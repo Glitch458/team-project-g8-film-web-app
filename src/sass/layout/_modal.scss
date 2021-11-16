@@ -3,6 +3,17 @@
   top: 20px;
   left: 20px;
 }
+.modal-card {
+  width: 280px;
+
+  padding: 20px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  background-color: $primary-background;
+}
 .modal-card-close-btn {
   width: 30px;
   height: 30px;
@@ -14,17 +25,6 @@
 }
 .mobile-menu__icon {
   outline: 1px solid black;
-}
-.modal-card {
-  width: 280px;
-
-  padding: 20px;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  background-color: $primary-background;
 }
 .modal-card-img {
   padding: 48px 20px 30px 20px;
@@ -117,6 +117,7 @@ img {
   border-radius: 5px;
 
   background-color: $primary-background;
+  cursor: pointer;
 }
 .modal-card-btn-watched {
   background-color: $accent-secondary;
