@@ -15,6 +15,7 @@ function closeContributorsModalByEsc(evt) {
   if (evt.key === 'Escape') {
     closeModal();
     window.removeEventListener('keydown', closeContributorsModalByEsc);
+    backdropEl.removeEventListener('click', closeContributorsModalByClick);
   }
 }
 
@@ -22,5 +23,6 @@ function closeContributorsModalByClick(evt) {
   if (evt.target === backdropEl) {
     closeModal();
     backdropEl.removeEventListener('click', closeContributorsModalByClick);
+    window.removeEventListener('keydown', closeContributorsModalByEsc);
   }
 }
