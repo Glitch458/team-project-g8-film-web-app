@@ -1,13 +1,15 @@
 .modal-movie-container {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  width: 100%;
+  height: 100%;
 }
 .modal-card {
+  position: absolute;
   width: 280px;
-
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding: 20px;
-
   position: absolute;
   top: 50%;
   left: 50%;
@@ -15,16 +17,21 @@
   background-color: $primary-background;
 }
 .modal-card-close-btn {
-  width: 30px;
-  height: 30px;
   position: absolute;
+  display: flex;
+  align-items: center;
+  text-align: center;
   top: 18px;
   right: 18px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
-  color: black;
+  fill: rgb(0, 0, 0);
 }
 .mobile-menu__icon {
-  outline: 1px solid black;
+  width: 30px;
+  height: 30px;
+  // outline: 1px solid black;
 }
 .modal-card-img {
   padding: 48px 20px 30px 20px;
@@ -157,11 +164,6 @@
   .modal-card-btn-queue {
     width: 125px;
   }
-  .modal-movie-container {
-    position: absolute;
-    top: 231px;
-    left: 75px;
-  }
 }
 @media screen and (min-width: 1024px) {
   .modal-card {
@@ -184,11 +186,5 @@
   .modal-card-btn-watched,
   .modal-card-btn-queue {
     width: 136px;
-  }
-  .modal-movie-container {
-    position: absolute;
-    // top: 100px;
-    // left: 71px;
-    margin: 100px 50px;
   }
 }
