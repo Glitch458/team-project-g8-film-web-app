@@ -23,6 +23,7 @@ export default {
   homeBtn: document.querySelector('[data-action="link-home"]'),//Дубль, один и тот же элемент 1
   libraryBtn: document.querySelector('[data-action="link-lib"]'),//Дубль, один и тот же элемент 2
   logoEl: document.querySelector('.header__icon--logo'),
+  logoBtn: document.querySelector('.header__logo--btn'),
   parentEl: document.querySelector('.header__menu'),
   headerBg: document.querySelector('.header'),
   // notifications
