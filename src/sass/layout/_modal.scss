@@ -33,22 +33,17 @@
 }
 .modal-card-close-btn {
   position: absolute;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  top: 18px;
-  right: 18px;
+  top: 10px;
+  right: 10px;
   width: 30px;
   height: 30px;
   cursor: pointer;
-  fill: rgb(0, 0, 0);
-}
-.mobile-menu__icon {
-  width: 30px;
-  height: 30px;
   background-color: white;
-  // outline: 1px solid black;
+  background-image: url('../images/close-icon.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
+
 .modal-card-img {
   padding: 48px 20px 30px 20px;
   width: 240px;
