@@ -42,4 +42,4 @@ const o=document.querySelector(".scroll-up-btn");function e(){document.body.scro
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/modal"),require("./js/contributors"),require("./js/footer-animation"),require("./js/spinner"),require("./js/apiService"),require("./js/gallery"),require("./js/pagination"),require("./js/my-library-btn"),require("./js/navigation"),require("./js/switch-theme"),require("./js/scroll-up-btn");
 },{"./sass/main.scss":"clu1","./js/modal":"RSqK","./js/contributors":"UWFd","./js/footer-animation":"zYIY","./js/spinner":"Sc1o","./js/apiService":"eQwa","./js/gallery":"chxP","./js/pagination":"o8lo","./js/my-library-btn":"zUhL","./js/navigation":"qr24","./js/switch-theme":"pE8F","./js/scroll-up-btn":"xnMT"}]},{},["Focm"], null)
-//# sourceMappingURL=/team-project-g8-film-web-app/src.50b11084.js.map
+//# sourceMappingURL=/team-project-g8-film-web-app/src.cab2bf85.js.map
