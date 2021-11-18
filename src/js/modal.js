@@ -1,3 +1,6 @@
+import refs from './refs'
+import movieCardTpl from '../templates/movie-card.hbs';
+
 export default function fetchMovie(movie) {
   return fetch(`https://api.themoviedb.org/3/movie/${movie}?api_key=744d4295a955a17cccf78658c430f199`)
     .then(response => {
@@ -10,7 +13,7 @@ export default function fetchMovie(movie) {
     })
     .catch(error => console.log(error));
  };
-import movieCardTpl from '../templates/movie-card.hbs';
+
 
 function openModal() {
   refs.movieCardContainer.classList.remove('is-hidden');
@@ -19,15 +22,6 @@ function openModal() {
 function closeModal() {
   refs.movieCardContainer.classList.add('is-hidden');
 }
-
-
-
-const refs = {
-  movieCardContainer: document.querySelector('.modal-movie-container'),
-  galleryMovies: document.querySelector('.gallery'),
-};
-
-
 
 refs.galleryMovies.addEventListener('click', openMovieModal);
 

@@ -1,22 +1,16 @@
 import { createPopularMoviesGallery, renderLibraryGallery } from './gallery';
 import { resetPagination } from './pagination';
-
-
-const homeBtn = document.querySelector('[data-action="link-home"]');
-const libraryBtn = document.querySelector('[data-action="link-lib"]');
-const logoEl = document.querySelector('.header__icon--logo');
-const parentEl = document.querySelector('.header__menu');
-const headerBg = document.querySelector('.header');
+import refs from './refs'
 
 // Навигация в хедере
-parentEl.addEventListener('click', e => {
-  if (e.target === logoEl || e.target === homeBtn) {
+refs.parentEl.addEventListener('click', e => {
+  if (e.target === refs.logoEl || e.target === refs.homeBtn) {
     resetPagination()
     createPopularMoviesGallery();
     homeBGI()
   }
 
-  if(e.target === libraryBtn) {
+  if(e.target === refs.libraryBtn) {
     libraryBGI()
     // тут будет фунция отрисовки библиотеки
   }
@@ -26,17 +20,17 @@ parentEl.addEventListener('click', e => {
 
 // Смена фона хедера для HOME
 function homeBGI() {
-    headerBg.classList.remove('header-library');
-    headerBg.classList.add('header-home');
-    homeBtn.classList.add('header__nav--link--current');
-    libraryBtn.classList.remove('header__nav--link--current');
+    refs.headerBg.classList.remove('header-library');
+    refs.headerBg.classList.add('header-home');
+    refs.homeBtn.classList.add('header__nav--link--current');
+    refs.libraryBtn.classList.remove('header__nav--link--current');
 };
 
 // Смена фона хедера для LIBRARY
 function libraryBGI() {
-    headerBg.classList.remove('header-home');
-    headerBg.classList.add('header-library');
-    homeBtn.classList.remove('header__nav--link--current');
-    libraryBtn.classList.add('header__nav--link--current');
+    refs.headerBg.classList.remove('header-home');
+    refs.headerBg.classList.add('header-library');
+    refs.homeBtn.classList.remove('header__nav--link--current');
+    refs.libraryBtn.classList.add('header__nav--link--current');
 };
 
