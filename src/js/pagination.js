@@ -4,6 +4,7 @@ import {
   clearGalleryMarkup,
   createSearchMoviesGallery,
 } from './gallery.js';
+import refs from './refs'
 
 const API_KEY = '2f8d6050c74d5f454a522d74a8cedbb8';
 const BASE_URL = 'https://api.themoviedb.org/3';
@@ -19,19 +20,6 @@ const total_results = (page = 1) => {
     });
 };
 
-const refs = {
-  dec: document.querySelector('#dec'),
-  inc: document.querySelector('#inc'),
-  page_numbers: document.querySelectorAll('.pag_text'),
-  page_items: document.querySelectorAll('.pag_item'),
-  pageMax: document.querySelector('.last_page'),
-  dotsLeft: document.querySelector('[data-dots="left"]'),
-  dotsRigth: document.querySelector('[data-dots="rigth"]'),
-  middleBtn: document.querySelector('#l3'),
-  btn4: document.querySelector('#l4'),
-  btn2: document.querySelector('#l2'),
-  pageFirst: document.querySelector('.first_page'),
-};
 // ===========btnarrow======
 refs.inc.addEventListener('click', () => {
   total_results().then(data => {

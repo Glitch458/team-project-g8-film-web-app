@@ -1,3 +1,4 @@
+import refs from './refs'
 import cardTpl from '../templates/card-template.hbs';
 import debounce from 'lodash.debounce';
 import fetchApiFilms from './apiService';
@@ -7,12 +8,7 @@ import { getMaxPages, resetPagination } from './pagination';
 
 const fetchFilms = new fetchApiFilms();
 
-const refs = {
-  gallery: document.querySelector('.js-gallery'),
-  search: document.querySelector('.header__form-input'),
-  pagination: document.querySelector('.pagination'),
-  iconSearch: document.querySelector('.header__icon--search')
-};
+
 
 createPopularMoviesGallery();
 refs.search.addEventListener('input', debounce(onInputChange, 1000));
