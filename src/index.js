@@ -12,3 +12,4 @@ import './js/switch-theme';
 import './js/scroll-up-btn'
 import './js/my-library';
 
+import './js/local-storage'

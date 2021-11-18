@@ -1,12 +1,12 @@
-const spinRef = document.querySelector('.js-spinner');
+import refs from './refs'
 
 function startSpin() {
-  spinRef.classList.add('is-open');
+  refs.spinRef.classList.add('is-open');
 }
 
 function stopSpin() {
   setTimeout(function () {
-    spinRef.classList.remove('is-open');
+    refs.spinRef.classList.remove('is-open');
   }, 300);
 }
 

@@ -1,9 +1,14 @@
-export const backdropEl = document.querySelector('.backdrop');
+import refs from './refs'
 
-export function openModal() {
-  backdropEl.classList.remove('is-hidden');
+function openModal() {
+  refs.backdropEl.classList.remove('is-hidden');
 }
 
-export function closeModal() {
-  backdropEl.classList.add('is-hidden');
+function closeModal() {
+  refs.backdropEl.classList.add('is-hidden');
+}
+
+export {
+  openModal,
+  closeModal,
 }

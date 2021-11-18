@@ -1,6 +1,6 @@
 .cont {
   position: absolute;
-  margin: 85px 15px;
+  margin: 85px 5px;
   padding: 15px;
   background-color: #000;
   background-image: url('../images/wall-mobile.jpg');
@@ -13,7 +13,7 @@
       margin-top: 5px;
       margin-bottom: 20px;
       font-size: 50px;
-      font-weight: 100;
+      font-weight: 700;
       color: #fff;
       text-shadow:
       0 0 4px #fff,
@@ -43,7 +43,7 @@
     box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem $accent, 0 0 0.8rem $accent,
       0 0 2.8rem $accent, inset 0 0 1.3rem $accent;
     border-radius: 0px 0px 4px 4px;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.75);
   }
 
   &__photo {
