@@ -11,7 +11,15 @@ export default function fetchMovie(movie) {
     .catch(error => console.log(error));
  };
 import movieCardTpl from '../templates/movie-card.hbs';
-import { backdropEl, openModal, closeModal } from './backdrop';
+
+function openModal() {
+  refs.movieCardContainer.classList.remove('is-hidden');
+}
+
+function closeModal() {
+  refs.movieCardContainer.classList.add('is-hidden');
+}
+
 
 
 const refs = {
@@ -28,23 +36,23 @@ function openMovieModal(evt) {
   const id = Number(evt.target.id);
   openModal()
   fetchMovie(id);
-  window.addEventListener('keydown', closeContributorsModalByEsc);
-  backdropEl.addEventListener('click', closeContributorsModalByClick);
+  window.addEventListener('keydown', closeMovieModalByEsc);
+  refs.movieCardContainer.addEventListener('click', closeMovieModalByClick);
 }
 
-function closeContributorsModalByEsc(evt) {
+function closeMovieModalByEsc(evt) {
   if (evt.key === 'Escape') {
     closeModal();
-    window.removeEventListener('keydown', closeContributorsModalByEsc);
-    backdropEl.removeEventListener('click', closeContributorsModalByClick);
+    window.removeEventListener('keydown', closeMovieModalByEsc);
+    refs.movieCardContainer.removeEventListener('click', closeMovieModalByClick);
   }
 }
 
-function closeContributorsModalByClick(evt) {
-  if (evt.target === backdropEl) {
+function closeMovieModalByClick(evt) {
+  if (evt.target === refs.movieCardContainer) {
     closeModal();
-    backdropEl.removeEventListener('click', closeContributorsModalByClick);
-    window.removeEventListener('keydown', closeContributorsModalByEsc);
+    refs.movieCardContainer.removeEventListener('click', closeMovieModalByClick);
+    window.removeEventListener('keydown', closeMovieModalByEsc);
 
   }
 }
@@ -53,8 +61,8 @@ refs.movieCardContainer.addEventListener('click', function (e) {
   if (e.target.classList.contains('mobile-menu__icon')) {
     // Кнопка закрытия модалки
     closeModal();
-    window.removeEventListener('keydown', closeContributorsModalByEsc);
-    backdropEl.removeEventListener('click', closeContributorsModalByClick);
+    window.removeEventListener('keydown', closeMovieModalByEsc);
+    refs.movieCardContainer.removeEventListener('click', closeMovieModalByClick);
   } else if (e.target.classList.contains('modal-card-btn-watched')) {
     //Функция для кнопки "ADD TO WACHED"
     console.log('кнопка 1');
