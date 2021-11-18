@@ -52,7 +52,7 @@ function closeMovieModalByClick(evt) {
 }
 // функции для кнопок модалки
 refs.movieCardContainer.addEventListener('click', function (e) {
-  if (e.target.classList.contains('mobile-menu__icon')) {
+  if (e.target.classList.contains('mobile-menu__icon') || e.target.classList.contains('mobile-menu__path')) {
     // Кнопка закрытия модалки
     closeModal();
     window.removeEventListener('keydown', closeMovieModalByEsc);
