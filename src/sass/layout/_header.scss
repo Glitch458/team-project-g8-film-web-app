@@ -21,7 +21,17 @@
   align-items: center;
   width: 175px;
 }
-
+.header__logo--btn {
+  background-color: transparent;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.17;
+  color: $primary-background;
+  cursor: pointer;
+}
+.header__icon--logo {
+  cursor: pointer;
+}
 .header__title {
   font-size: 30px;
   line-height: 1.17;
@@ -43,6 +53,7 @@
 .header__nav--link {
   background-color: transparent;
   color: $primary-background;
+  cursor: pointer;
 }
 
 .header__nav--link--current {
@@ -104,7 +115,7 @@
   right: 30px;
   bottom: -70px;
   cursor: pointer;
-  @media screen and (min-width: 767px) {
+  @media screen and (min-width: 768px) {
     right: 75px;
   }
 }

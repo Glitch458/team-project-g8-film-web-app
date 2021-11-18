@@ -4,10 +4,10 @@ import refs from './refs'
 
 // Навигация в хедере
 refs.parentEl.addEventListener('click', e => {
-  if (e.target === refs.logoEl || e.target === refs.homeBtn) {
+  if (e.target === refs.logoEl || e.target === refs.homeBtn || e.target === refs.logoBtn) {
     resetPagination()
     createPopularMoviesGallery();
-    homeBGI()
+    homeBGI();
   }
 
   if(e.target === refs.libraryBtn) {
@@ -33,4 +33,3 @@ function libraryBGI() {
     refs.homeBtn.classList.remove('header__nav--link--current');
     refs.libraryBtn.classList.add('header__nav--link--current');
 };
-
