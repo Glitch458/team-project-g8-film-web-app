@@ -1,5 +1,7 @@
 import { createPopularMoviesGallery, renderLibraryGallery } from './gallery';
 import { libraryMovies } from './my-library'
+import { resetPagination } from './pagination';
+
 
 const homeBtn = document.querySelector('[data-action="link-home"]');
 const libraryBtn = document.querySelector('[data-action="link-lib"]');
@@ -9,11 +11,8 @@ const headerBg = document.querySelector('.header');
 
 // Навигация в хедере
 parentEl.addEventListener('click', e => {
-  if (e.target === logoEl) {
-    createPopularMoviesGallery();
-  }
-
-  if(e.target === homeBtn) {
+  if (e.target === logoEl || e.target === homeBtn) {
+    resetPagination()
     createPopularMoviesGallery();
     homeBGI()
   }
@@ -21,6 +20,7 @@ parentEl.addEventListener('click', e => {
   if(e.target === libraryBtn) {
     libraryBGI()
     libraryMovies()
+    // тут будет фунция отрисовки библиотеки
   }
 
   return;

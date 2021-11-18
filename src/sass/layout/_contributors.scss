@@ -8,6 +8,28 @@
   box-shadow: 0 0 0.2rem rgb(0, 0, 0), 0 0 0.2rem rgb(0, 0, 0), 0 0 2rem #2e2e2e, 0 0 0.8rem #2e2e2e,
     0 0 2.8rem #2e2e2e, inset 0 0 1.3rem #2e2e2e;
 
+    &__title {
+      text-align: center;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      font-size: 50px;
+      font-weight: 100;
+      color: #fff;
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px $accent,
+      0 0 80px $accent,
+      0 0 90px $accent,
+      0 0 100px $accent,
+      0 0 150px $accent;
+      
+      &--flicker {
+        animation: flicker 1.5s infinite alternate;
+      }
+    }
+
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -25,11 +47,12 @@
   }
 
   &__photo {
-    width: 50px;
-    height: 50px;
+    border-radius: 25%;
+    width: 75px;
     margin: 0 auto 10px;
   }
 
+  &__name,
   &__role {
     margin-bottom: 10px;
     color: #fff;
@@ -39,9 +62,9 @@
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    margin-bottom: 10px;
     box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem $accent, 0 0 0.8rem $accent,
       0 0 2.8rem $accent, inset 0 0 1.3rem $accent;
+      transition: fill 250ms;
 
     &:hover {
       fill: $accent;
@@ -74,10 +97,32 @@
 @media screen and (min-width: 1024px) {
   .cont {
     background-image: url('../images/wall-desktop.jpg');
-    width: 85%;
+    max-width: 750px;
 
     &__member {
       flex-basis: calc((100% - 120px) / 4);
     }
   }
+}
+
+/* Flickering animation */
+@keyframes flicker {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px $accent,
+      0 0 80px $accent,
+      0 0 90px $accent,
+      0 0 100px $accent,
+      0 0 150px $accent;
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
 }
