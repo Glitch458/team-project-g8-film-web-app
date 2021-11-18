@@ -1,8 +1,4 @@
-const refs = {
-  searchError: document.querySelector('.header__error-text'),
-  emptyGalleryText: document.querySelector('.info-notify-text'),
-  emptyGalleryImg: document.querySelector('.info-notify'),
-};
+import refs from './refs'
 
 // -----  notifications
 function renderInfoMsg() {
