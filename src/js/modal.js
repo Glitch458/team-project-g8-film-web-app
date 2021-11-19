@@ -7,7 +7,6 @@ export default function fetchMovie(movie) {
   )
     .then(response => {
       return response.json();
-      console.log(response.json());
     })
     .then(movie => {
       const markup = movieCardTpl(movie);
@@ -16,12 +15,8 @@ export default function fetchMovie(movie) {
     .catch(error => console.log(error));
 }
 
-function openModal() {
-  refs.movieCardContainer.classList.remove('is-hidden');
-}
-
-function closeModal() {
-  refs.movieCardContainer.classList.add('is-hidden');
+function toggleModal() {
+  refs.movieCardContainer.classList.toggle('is-hidden');
 }
 
 refs.galleryMovies.addEventListener('click', openMovieModal);
@@ -29,7 +24,7 @@ refs.galleryMovies.addEventListener('click', openMovieModal);
 function openMovieModal(evt) {
   evt.preventDefault();
   const id = Number(evt.target.id);
-  openModal();
+  toggleModal();
   fetchMovie(id);
   window.addEventListener('keydown', closeMovieModalByEsc);
   refs.movieCardContainer.addEventListener('click', closeMovieModalByClick);
@@ -37,7 +32,7 @@ function openMovieModal(evt) {
 
 function closeMovieModalByEsc(evt) {
   if (evt.key === 'Escape') {
-    closeModal();
+    toggleModal();
     window.removeEventListener('keydown', closeMovieModalByEsc);
     refs.movieCardContainer.removeEventListener('click', closeMovieModalByClick);
   }
@@ -45,7 +40,7 @@ function closeMovieModalByEsc(evt) {
 
 function closeMovieModalByClick(evt) {
   if (evt.target === refs.movieCardContainer) {
-    closeModal();
+    toggleModal();
     refs.movieCardContainer.removeEventListener('click', closeMovieModalByClick);
     window.removeEventListener('keydown', closeMovieModalByEsc);
   }
@@ -54,7 +49,7 @@ function closeMovieModalByClick(evt) {
 refs.movieCardContainer.addEventListener('click', function (e) {
   if (e.target.classList.contains('modal-card-close-btn')) {
     // Кнопка закрытия модалки
-    closeModal();
+    toggleModal();
     window.removeEventListener('keydown', closeMovieModalByEsc);
     refs.movieCardContainer.removeEventListener('click', closeMovieModalByClick);
   } else if (e.target.classList.contains('modal-card-btn-watched')) {

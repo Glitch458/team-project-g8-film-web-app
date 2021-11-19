@@ -17,11 +17,9 @@ export default {
   // my-library-btn
   headerLabel: document.querySelector('.header__label'),
   myLibraryBtn: document.querySelector('.my-library__btns'),
-  add: document.querySelector('[data-action="link-lib"]'),//Дубль, один и тот же элемент 2
-  remove: document.querySelector('[data-action="link-home"]'),//Дубль, один и тот же элемент 1
   // navigation
-  homeBtn: document.querySelector('[data-action="link-home"]'),//Дубль, один и тот же элемент 1
-  libraryBtn: document.querySelector('[data-action="link-lib"]'),//Дубль, один и тот же элемент 2
+  homeBtn: document.querySelector('[data-action="link-home"]'),
+  libraryBtn: document.querySelector('[data-action="link-lib"]'),
   logoEl: document.querySelector('.header__icon--logo'),
   logoBtn: document.querySelector('.header__logo--btn'),
   parentEl: document.querySelector('.header__menu'),

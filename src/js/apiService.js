@@ -1,9 +1,10 @@
+import noimage from '../images/noimage.jpg';
+
 const API_KEY = '2f8d6050c74d5f454a522d74a8cedbb8';
 const BASE_URL = 'https://api.themoviedb.org/3';
 
 const YouTube_KEY = 'AIzaSyBsjU_AyffyMHxyv2KNKiEnDPB3n0dY8XE';
 const YouTube_URL = 'https://youtube.googleapis.com/youtube/v3/search?part=snippet';
-import noimage from '../images/noimage.jpg';
 
 export default class fetchApiFilms {
   constructor() {
