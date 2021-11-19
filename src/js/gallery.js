@@ -51,13 +51,13 @@ function createSearchMoviesGallery() {
     .then(movies => {
       if (movies.length === 0) {
         
-        renderEmptyGalleryMsg('Film not found');
+        
         removeHiddenfromCardEl();
       } else {
         makeGalleryMarkup(movies);
       }
     })
-    .catch(renderInfoMsg())
+    .catch(renderInfoMsg(), renderEmptyGalleryMsg('Film not found'))
     .finally(stopSpin);
 }
 
