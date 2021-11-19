@@ -1,0 +1,33 @@
+.scroll-up-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: $accent;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+  }
+
+  &__icon {
+    object-fit: contain;
+    fill: $secondary-text-color;
+    width: 30px;
+    height: 30px;
+  }
+
+  &:hover {
+    background-color: #555;
+  }
+}

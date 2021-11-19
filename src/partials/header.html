@@ -1,0 +1,53 @@
+<header class="header header-home">
+  <div class="container header__box">
+    <div class="header__menu">
+      <div class="header__logo-box">
+        <svg class="header__icon--logo" width="24" height="24">
+          <use href="./images/sprite.svg#icon-logo"></use>
+        </svg>
+        <h1 class="header__title">
+          <button type="button" class="header__logo--btn">Filmoteka</button>
+        </h1>
+      </div>
+
+      <nav class="header__nav">
+        <button
+          type="button"
+          class="header__nav--link header__nav--link--current"
+          data-action="link-home"
+        >
+          HOME
+        </button>
+        <button type="button" class="header__nav--link" data-action="link-lib">MY LIBRARY</button>
+      </nav>
+    </div>
+
+    <label class="header__label">
+      <input
+        class="header__input header__form-input"
+        type="search"
+        name="filmname"
+        placeholder="Поиск фильмов"
+      />
+
+      <svg class="header__icon--search" width="12" height="12">
+        <use href="./images/sprite.svg#icon-search"></use>
+      </svg>
+    </label>
+    <div class="my-library__btns visually-hidden">
+      <ul class="my-library__list">
+        <li class="my-library__item">
+          <button class="my-library__button button js-btn-watched" type="button">Watched</button>
+        </li>
+        <li class="my-library__item">
+          <button class="my-library__button button js-btn-queue" type="button">Queue</button>
+        </li>
+      </ul>
+    </div>
+    <p class="header__error-text is-hidden">Search result not successful. Enter the correct movie name!</p>
+    <div class="container">
+      <svg class="header__theme-switcher ligth" width="20" height="20">
+      <use href="./images/sprite.svg#change-theme"></use>
+    </svg></div>
+  </div>
+</header>

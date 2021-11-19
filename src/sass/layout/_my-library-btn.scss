@@ -1,0 +1,48 @@
+// начало стилей для кнопок my-libary
+
+.my-library__btns {
+  display: flex;
+  justify-content: center;
+}
+.my-library__list {
+  display: flex;
+}
+.my-library__item:not(:last-child) {
+  margin-right: 20px;
+}
+.my-library__item {
+  display: block;
+}
+
+.my-library__item {
+  width: 130px;
+  height: 44px;
+}
+.my-library__button {
+  display: inline-block;
+  padding: 14px 36.19px 12px;
+  min-width: 130px;
+  font-weight: 500;
+  line-height: 1.33333;
+  text-align: center;
+  text-transform: uppercase;
+  color: $secondary-text-color;
+  background: transparent;
+  border: 1px solid $primary-background;
+  border-radius: 5px;
+}
+.my-library__button:focus,
+.my-library__button:hover {
+  border: 1 px solid $accent-secondary;
+  background: $accent-secondary;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .my-library__item:not(:last-child) {
+    margin-right: 15px;
+  }
+  .my-library__item {
+    width: 136px;
+  }
+}

@@ -1,0 +1,84 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+body.light-theme {
+  background: #ffffff;
+  background-image: radial-gradient(
+      circle at bottom left,
+      rgba(167, 80, 0, 0.445),
+      rgba(255, 255, 255, 0.349)
+    ),
+    url(../images/background-images/cinema-white.jpg);
+  background-attachment: fixed;
+  background-size: auto 100%;
+  background-position: left;
+  color: #000000;
+  transition: background 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 1152px) {
+    background-size: cover;
+  }
+}
+
+body.dark-theme {
+  background: #1a0202;
+  background-image: radial-gradient(
+      circle at bottom left,
+      rgba(105, 51, 0, 0.445),
+      rgba(0, 0, 0, 0.349)
+    ),
+    url(../images/background-images/cinema-dark.jpg);
+  background-attachment: fixed;
+  background-size: auto 100%;
+  background-position: left;
+  color: #ffffff;
+  transition: background 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+  @media screen and (min-width: 1152px) {
+    background-size: cover;
+  }
+}
