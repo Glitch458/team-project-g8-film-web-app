@@ -4,7 +4,26 @@
   padding-top: 41px;
   padding-bottom: 97px;
 }
+.header__notification {
+  position: absolute;
+  top: 120px;
 
+  font-size: 14px;
+  line-height: 1.14;
+
+  color: #ff001b;
+}
+@media screen and (min-width: 768px) {
+  .header__notification {
+    left: 25%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header__notification {
+    left: 30%;
+  }
+}
 .header__box {
   position: relative;
 }
