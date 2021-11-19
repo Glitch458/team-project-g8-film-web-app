@@ -1,9 +1,10 @@
+import noimage from '../images/noimage.jpg';
+
 const API_KEY = '2f8d6050c74d5f454a522d74a8cedbb8';
 const BASE_URL = 'https://api.themoviedb.org/3';
 
 const YouTube_KEY = 'AIzaSyBsjU_AyffyMHxyv2KNKiEnDPB3n0dY8XE';
 const YouTube_URL = 'https://youtube.googleapis.com/youtube/v3/search?part=snippet';
-import noimage from '../images/noimage.jpg';
 
 export default class fetchApiFilms {
   constructor() {
@@ -13,10 +14,13 @@ export default class fetchApiFilms {
   }
 
   fetchPopularMoviesMaxPage() {
-    return fetch(`${BASE_URL}/trending/movie/day?api_key=${API_KEY}&language=en-US`).then(r =>
-      r.json(),
-    );
-  } // Shu
+    return fetch(`${BASE_URL}/trending/movie/day?api_key=${API_KEY}&language=en-US`).then( r => {
+      if(r.status === 404) {
+        alert('OOPS:)')
+        return
+      }
+      r.json()
+    })}; // Shu
 
   fetchPopularMovies() {
     const url = `${BASE_URL}/trending/movie/day?api_key=${API_KEY}&language=en-US&page=${this.page}`;

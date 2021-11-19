@@ -12,16 +12,61 @@ export default function fetchMovie(movie) {
     .then(movie => {
       const markup = movieCardTpl(movie);
       refs.movieCardContainer.innerHTML = markup;
+      console.log(movie.id);
+      let new_data = movie.id;
+      refs.movieCardContainer.addEventListener('click', function (e) {
+        if (e.target.classList.contains('mobile-menu__icon')) {
+          // Кнопка закрытия модалки
+          closeModal();
+          window.removeEventListener('keydown', closeContributorsModalByEsc);
+          backdropEl.removeEventListener('click', closeContributorsModalByClick);
+          return;
+        }
+        if (e.target.classList.contains('modal-card-btn-watched')) {
+          //Функция для кнопки "ADD TO WACHED"
+          // console.log('movie.id', movie.id); //Вся беда вот в этом movie.id!!!!
+
+          function watchId(new_data) {
+            let idArray = [];
+
+            const data = localStorage.getItem('watch'); //получаем данные с localStorage
+            // если в переменной data лежит не null мы парсим данные из localStorage
+            if (data) {
+              idArray = JSON.parse(data);
+            }
+
+            if (!idArray.includes(new_data)) idArray.push(new_data);
+            localStorage.setItem('watch', JSON.stringify(idArray));
+            e.target.textContent = 'REMOVE FROM WATCHED';
+          }
+          watchId(new_data);
+          return;
+        }
+        if (e.target.classList.contains('modal-card-btn-queue')) {
+          // Функция для кнопки "ADD TO QUEUE"
+          function queueId(new_data) {
+            let idArray = [];
+
+            const data = localStorage.getItem('queue'); //получаем данные с localStorage
+            // если в переменной data лежит не null мы парсим данные из localStorage
+            if (data) {
+              idArray = JSON.parse(data);
+            }
+
+            if (!idArray.includes(new_data)) idArray.push(new_data);
+            localStorage.setItem('queue', JSON.stringify(idArray));
+            e.target.textContent = 'REMOVE FROM QUEUE';
+          }
+          queueId(new_data);
+          return;
+        }
+      });
     })
     .catch(error => console.log(error));
 }
 
-function openModal() {
-  refs.movieCardContainer.classList.remove('is-hidden');
-}
-
-function closeModal() {
-  refs.movieCardContainer.classList.add('is-hidden');
+function toggleModal() {
+  refs.movieCardContainer.classList.toggle('is-hidden');
 }
 
 refs.galleryMovies.addEventListener('click', openMovieModal);
@@ -29,7 +74,7 @@ refs.galleryMovies.addEventListener('click', openMovieModal);
 function openMovieModal(evt) {
   evt.preventDefault();
   const id = Number(evt.target.id);
-  openModal();
+  toggleModal();
   fetchMovie(id);
   window.addEventListener('keydown', closeMovieModalByEsc);
   refs.movieCardContainer.addEventListener('click', closeMovieModalByClick);
@@ -37,7 +82,7 @@ function openMovieModal(evt) {
 
 function closeMovieModalByEsc(evt) {
   if (evt.key === 'Escape') {
-    closeModal();
+    toggleModal();
     window.removeEventListener('keydown', closeMovieModalByEsc);
     refs.movieCardContainer.removeEventListener('click', closeMovieModalByClick);
   }
@@ -45,7 +90,7 @@ function closeMovieModalByEsc(evt) {
 
 function closeMovieModalByClick(evt) {
   if (evt.target === refs.movieCardContainer) {
-    closeModal();
+    toggleModal();
     refs.movieCardContainer.removeEventListener('click', closeMovieModalByClick);
     window.removeEventListener('keydown', closeMovieModalByEsc);
   }
@@ -54,14 +99,12 @@ function closeMovieModalByClick(evt) {
 refs.movieCardContainer.addEventListener('click', function (e) {
   if (e.target.classList.contains('modal-card-close-btn')) {
     // Кнопка закрытия модалки
-    closeModal();
+    toggleModal();
     window.removeEventListener('keydown', closeMovieModalByEsc);
     refs.movieCardContainer.removeEventListener('click', closeMovieModalByClick);
   } else if (e.target.classList.contains('modal-card-btn-watched')) {
     //Функция для кнопки "ADD TO WACHED"
-    console.log('кнопка 1');
   } else if (e.target.classList.contains('modal-card-btn-queue')) {
     // Функция для кнопки "ADD TO QUEUE"
-    console.log('кнопка 2');
   }
 });

@@ -21,7 +21,7 @@ function closeContributorsModalByEsc(evt) {
 function closeContributorsModalByClick(evt) {
   if (evt.target === refs.backdropEl) {
     closeModal();
-    refs.backdropEl.removeEventListener('click', closeContributorsModalByClick);
     window.removeEventListener('keydown', closeContributorsModalByEsc);
+    refs.backdropEl.removeEventListener('click', closeContributorsModalByClick);
   }
 }
