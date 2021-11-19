@@ -14,6 +14,7 @@ refs.parentEl.addEventListener('click', e => {
   if(e.target === refs.libraryBtn) {
     // libraryMovies()
     libraryBGI()
+    refs.gallery.innerHTML = '';
     // тут будет фунция отрисовки библиотеки
   }
 
