@@ -14,10 +14,13 @@ export default class fetchApiFilms {
   }
 
   fetchPopularMoviesMaxPage() {
-    return fetch(`${BASE_URL}/trending/movie/day?api_key=${API_KEY}&language=en-US`).then(r =>
-      r.json(),
-    );
-  } // Shu
+    return fetch(`${BASE_URL}/trending/movie/day?api_key=${API_KEY}&language=en-US`).then( r => {
+      if(r.status === 404) {
+        alert('OOPS:)')
+        return
+      }
+      r.json()
+    })}; // Shu
 
   fetchPopularMovies() {
     const url = `${BASE_URL}/trending/movie/day?api_key=${API_KEY}&language=en-US&page=${this.page}`;
