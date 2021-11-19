@@ -88,6 +88,7 @@ function renderLibraryGallery(ids) {
   hideInfoImg();
 
   if (ids.length === 0) {
+    renderInfoMsg();
     renderEmptyGalleryMsg('You have no saved movies yet');
     removeHiddenfromCardEl(); //для скрытия пагинации раскомментировать
   }

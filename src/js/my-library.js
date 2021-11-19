@@ -13,7 +13,7 @@ watchedBtn.addEventListener('click', getWatchedMovies);
 queueBtn.addEventListener('click', getQueueMovies);
 
 function getWatchedMovies() {  
-    let watchedMovies = localStorage.getItem('watched');
+    let watchedMovies = localStorage.getItem('watch');
     let watchedMoviesLs = JSON.parse(watchedMovies);
     renderLibraryGallery(watchedMoviesLs)
 }
@@ -26,7 +26,7 @@ function getQueueMovies() {
 }
 
 export function libraryMovies() {
-    let watchedMovies = localStorage.getItem('watched');
+    let watchedMovies = localStorage.getItem('watch');
     let watchedMoviesLs = JSON.parse(watchedMovies);
     let queueMovies = localStorage.getItem('queue');
     let queueMoviesLs = JSON.parse(queueMovies);
