@@ -39,7 +39,7 @@ function createPopularMoviesGallery() {
   getMaxPages();
   startSpin();
 
-  fetchFilms.fetchPopularMovies().then(makeGalleryMarkup).catch(console.log).finally(stopSpin);
+  fetchFilms.fetchPopularMovies().then(makeGalleryMarkup).catch(renderInfoMsg()).finally(stopSpin);
 }
 
 // ----- home рендер по результату поиска
@@ -50,14 +50,14 @@ function createSearchMoviesGallery() {
     .fetchSearchMovies()
     .then(movies => {
       if (movies.length === 0) {
-        renderInfoMsg();
+        
         renderEmptyGalleryMsg('Film not found');
         removeHiddenfromCardEl();
       } else {
         makeGalleryMarkup(movies);
       }
     })
-    .catch(console.log)
+    .catch(renderInfoMsg())
     .finally(stopSpin);
 }
 

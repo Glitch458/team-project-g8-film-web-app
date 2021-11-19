@@ -8,7 +8,7 @@ function renderInfoMsg() {
 
 function renderEmptyGalleryMsg(text) {
   refs.emptyGalleryText.textContent = `${text}`;
-  refs.emptyGalleryImg.classList.remove('is-hidden');
+  // refs.emptyGalleryImg.classList.remove('is-hidden');
 }
 
 function hideInfoImg() {

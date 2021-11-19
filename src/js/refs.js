@@ -25,7 +25,7 @@ export default {
   parentEl: document.querySelector('.header__menu'),
   headerBg: document.querySelector('.header'),
   // notifications
-  searchError: document.querySelector('.header__error-text'),
+  searchError: document.querySelector('.info-notify'),
   emptyGalleryText: document.querySelector('.info-notify-text'),
   emptyGalleryImg: document.querySelector('.info-notify'),
   // pagination
