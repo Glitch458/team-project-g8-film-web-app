@@ -3,12 +3,6 @@ import { makeLibraryGallery, renderLibraryGallery } from './gallery';
 const watchedBtn = document.querySelector('.js-btn-watched');
 const queueBtn = document.querySelector('.js-btn-queue');
 
-// let movieLocalStorage = [];
-// movieLocalStorage = [438631, 522402];
-// let queueLs = [580489];
-// localStorage.setItem('watch', JSON.stringify(movieLocalStorage))
-// localStorage.setItem('queue', JSON.stringify(queueLs))
-
 watchedBtn.addEventListener('click', getWatchedMovies);
 queueBtn.addEventListener('click', getQueueMovies);
 

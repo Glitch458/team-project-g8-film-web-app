@@ -32,11 +32,6 @@ refs.inc.addEventListener('click', () => {
       refs.dec.disabled = false;
     }
 
-     /*refs.page_numbers.forEach(el => {
-       el.textContent = +el.textContent + 1;
-     });*/
-
-
     refs.page_items.forEach(el => {
       if (
         +el.firstChild.textContent === 1 ||
@@ -65,7 +60,6 @@ refs.dec.addEventListener('click', () => {
   }
 
   refs.page_numbers.forEach(el => {
-    /*el.textContent = +el.textContent - 1;*/
   });
 });
 // ===========btnpag======

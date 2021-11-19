@@ -24,8 +24,6 @@ export default function fetchMovie(movie) {
         }
         if (e.target.classList.contains('modal-card-btn-watched')) {
           //Функция для кнопки "ADD TO WACHED"
-          // console.log('movie.id', movie.id); //Вся беда вот в этом movie.id!!!!
-
           function watchId(new_data) {
             let idArray = [];
 
