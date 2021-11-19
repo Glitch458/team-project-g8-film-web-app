@@ -1,4 +1,5 @@
 import { createPopularMoviesGallery, renderLibraryGallery } from './gallery';
+import { libraryMovies } from './my-library'
 import { resetPagination } from './pagination';
 import refs from './refs'
 
@@ -11,6 +12,7 @@ refs.parentEl.addEventListener('click', e => {
   }
 
   if(e.target === refs.libraryBtn) {
+    libraryMovies()
     changeBGI()
     // тут будет фунция отрисовки библиотеки
   }

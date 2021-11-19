@@ -10,4 +10,5 @@ import './js/my-library-btn';
 import './js/navigation';
 import './js/switch-theme';
 import './js/scroll-up-btn'
-import './js/storage/local-storage'
+import './js/my-library';
+import './js/storage/local-storage';
